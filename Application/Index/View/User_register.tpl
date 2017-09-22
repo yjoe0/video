@@ -107,5 +107,5 @@ $(document).ready(function () {
     });
 });
 </script>
-    </body>
-</html>
+<include file="./Application/Index/View/footer.tpl" />
+

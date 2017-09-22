@@ -6,7 +6,7 @@ class IndexController extends Controller {
 
         $Contents = M('contents');
         $count      = $Contents->count();
-        $Page       = new \Think\Page($count,8);
+        $Page       = new \Think\Page($count,9);
         $show       = $Page->show();
         $datas = $Contents->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('datas',$datas);
