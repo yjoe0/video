@@ -26,9 +26,9 @@
                             <?php if( ($data['fee'] == '0') || ($user['fee'] >= $data['fee']) )  {?>
                                 <a href="/detail/<?php echo $data['id']?>"><?php echo $data['title']?></a> 
                             <?php } else if($user['uid'] == 0){?>
-                            <a href="/login") ?>">登陆后可见，点我登陆</a> 
+                            <a href="/login") ?>登陆后可见，点我登陆</a> 
                             <?php } else {?>
-                            <a href="/user")}">权限不够，请在个人中心升级</a> 
+                            <a href="/user")}">需要积分<?php echo $data['fee']?>，请在个人中心升级</a> 
                             <?php }?>
                             </h2>
 
