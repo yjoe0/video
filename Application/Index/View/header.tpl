@@ -11,9 +11,9 @@
     <title>福利视频集</title>
 
     <!-- 使用url函数转换相关路径 -->
-    <script type="text/javascript" src="http://v.opihome.me/usr/themes/chopstack/jquery.js"></script>
-    <link rel="stylesheet" href="http://v.opihome.me/usr/themes/chopstack/grid.css">
-    <link rel="stylesheet" href="http://v.opihome.me/usr/themes/chopstack/style.css">
+    <script type="text/javascript" src="http://v.opihome.me/css/jquery.js"></script>
+    <link rel="stylesheet" href="http://v.opihome.me/css/th/grid.css">
+    <link rel="stylesheet" href="http://v.opihome.me/css/th/style.css">
 
 </head>
 <body>

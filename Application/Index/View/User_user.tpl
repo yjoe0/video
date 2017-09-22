@@ -27,6 +27,9 @@
         </div>
             </span>
         </div>
+        <div class="row">
+            邀请注册获取积分:<span>让别人邀请码填你的用户名</span>
+        </div>
     </div>
 </div>
 <style> 

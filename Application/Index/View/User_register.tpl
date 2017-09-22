@@ -21,6 +21,9 @@
 <div class="typecho-login-wrap">
     <div class="typecho-login">
             <p>
+                <label for="invite" class="sr-only">邀请码</label>
+                <input type="text" id="invite" name="invite" value="" placeholder="邀请码" class="text-l w-100" value="test" />
+            </p><p>
                 <label for="name" class="sr-only">用户名</label>
                 <input type="text" id="name" name="name" value="" placeholder="用户名" class="text-l w-100" autofocus />
             </p>
@@ -58,12 +61,18 @@ $(document).ready(function () {
         $('#img-captcha').attr('src','/captcha?t='+Math.random());
     });
     $('#submit').click(function(){
+        var invite = $('#invite').val();
         var name = $('#name').val();
         var password = $('#password').val();
         var repassword = $('#repassword').val();
         var captcha = $('#captcha').val();
         var data = {};
-        if( /^[0-9a-z]+$/i.test(name) ) {
+        if( /^[0-9a-z]{1,10}$/i.test(invite) ) {
+            data['invite'] = invite;
+        } else {
+            data['invite'] = 'test';
+        }
+        if( /^[0-9a-z]{1,10}$/i.test(name) ) {
             data['name'] = name;
         } else {
             alert('用户名只能包括字母和数字');

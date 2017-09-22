@@ -74,6 +74,7 @@ class UserController extends Controller {
         $name = $_POST['name'];
         $pwd = $_POST['password'];
         $captcha = $_POST['captcha'];
+        $invite = $_POST['invite'];
         $verify = new \Think\Verify();
         if ( !$verify->check($captcha) ) {
             $res = array('status'=>0,'msg'=> '验证码错误');
@@ -81,22 +82,28 @@ class UserController extends Controller {
             die();
         }
 
-        if(!preg_match('/^[0-9a-zA-Z]+$/', $name)) {
+        if(!preg_match('/^[0-9a-zA-Z]{1,10}$/', $name)) {
             $res = array('status'=>0,'msg'=> '用户名只能是字母和数字');
+            echo json_encode($res);
+            die();
+        }
+        if(!preg_match('/^[0-9a-zA-Z]{1,10}$/', $name)) {
+            $res = array('status'=>0,'msg'=> '邀请码只能是字母和数字');
             echo json_encode($res);
             die();
         }
         $user = M('user');
         $condition['username'] = $name;
         $condition['password'] = md5($pwd);
+        $condition['invite'] = $invite;
         $data = $user->create($condition);
-        print_r($data);
+
         if ($data) {
-            $_SESSION['uid']=$data['uid'];
-            $user->add();
+            $_SESSION['uid']= $user->add();
+            $invites['username'] = $invite;
+            $user->where($invites)->setInc('fee',1);
             $res = array('status'=>1,'msg'=> '注册成功','url'=>'user');
             echo json_encode($res);
-            die();
         } else {
             $res = array('status'=>0,'msg'=> '用户名或密码错误');
             echo json_encode($res);
@@ -112,11 +119,11 @@ class UserController extends Controller {
     public function check() {
         $captcha = $_POST['captcha'];
         $verify = new \Think\Verify();
-        // if ( !$verify->check($captcha) ) {
-        //     $res = array('status'=>0,'msg'=> '验证码错误');
-        //     echo json_encode($res);
-        //     die();
-        // }
+        if ( !$verify->check($captcha) ) {
+            $res = array('status'=>0,'msg'=> '验证码错误');
+            echo json_encode($res);
+            die();
+        }
 
         $token = $_POST['token'];
         $check = preg_match('/^[_0-9a-z]{32}$/i', $token);
@@ -150,6 +157,8 @@ class UserController extends Controller {
             die();
         }
     }
+
+
     public function captcha() {
         $verify = new \Think\Verify();
         $verify->entry();
