@@ -1,0 +1,10 @@
+Runtime/
+/Common/
+*.log
+config.php
+index.php
+PubLic/media/
+Uploads/
+media/
+css/
+js/
