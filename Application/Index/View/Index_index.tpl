@@ -9,7 +9,7 @@
                 <div id="list_container">
 <?php foreach($datas as $key => $data) {?>
         
-<article class="post-box pure-u-1 pure-u-sm-1-2 pure-u-md-2-3" style="width:300px">
+<article class="post-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
                     <div class="post">
 
                     <!--如果不是第2条-->
@@ -67,5 +67,4 @@
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);} </style>
 
 
-</body>
-</html>
+<include file="./Application/Index/View/footer.tpl" />
