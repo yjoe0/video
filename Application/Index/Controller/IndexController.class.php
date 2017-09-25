@@ -8,7 +8,7 @@ class IndexController extends Controller {
         $count      = $Contents->count();
         $Page       = new \Think\Page($count,9);
         $show       = $Page->show();
-        $datas = $Contents->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $datas = $Contents->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('datas',$datas);
         $this->assign('show',$show);
         $this->assign('user',A('user')->info());
