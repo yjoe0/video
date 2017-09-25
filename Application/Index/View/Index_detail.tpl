@@ -63,6 +63,26 @@
         </div>
     </div>
 </div>
+<script>
+    function waudioAutoPlay() {
+        var audio = document.getElementById('video');
+            audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+   function audioAutoPlay() {
+                var audio = document.getElementById('video');
+                    audio.play();
+                
+            }
+        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+        document.addEventListener('DOMContentLoaded', waudioAutoPlay(),false);
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        document.addEventListener('touchstart', audioAutoPlay() ,false);
+        document.removeEventListener('DOMContentLoaded', waudioAutoPlay(),false);
+        document.removeEventListener('touchstart', waudioAutoPlay(),false);
 
+</script>
 
 <include file="./Application/Index/View/footer.tpl" />

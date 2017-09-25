@@ -87,7 +87,7 @@ class UserController extends Controller {
             echo json_encode($res);
             die();
         }
-        if(!preg_match('/^[0-9a-zA-Z]{1,10}$/', $name)) {
+        if(!preg_match('/^[0-9a-zA-Z]{1,10}$/', $invite)) {
             $res = array('status'=>0,'msg'=> '邀请码只能是字母和数字');
             echo json_encode($res);
             die();
