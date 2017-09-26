@@ -5,7 +5,7 @@
 
 
 
-            <div class="post-cols">
+            <div class="post-cols" style="width: 100%">
                 <div id="list_container">
 <?php foreach($datas as $key => $data) {?>
         
