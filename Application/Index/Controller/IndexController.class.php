@@ -3,15 +3,20 @@ namespace Index\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-
+        $user = A('user')->info();
+        if($user['uid']>0) {
+            $order = 'id desc';
+        } else {
+            $order = 'id asc';
+        }
         $Contents = M('contents');
         $count      = $Contents->count();
         $Page       = new \Think\Page($count,9);
         $show       = $Page->show();
-        $datas = $Contents->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $datas = $Contents->order( $order )->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('datas',$datas);
         $this->assign('show',$show);
-        $this->assign('user',A('user')->info());
+        $this->assign('user',$user);
         $this->display();
     }
 
