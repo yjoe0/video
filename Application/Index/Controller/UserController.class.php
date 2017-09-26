@@ -6,8 +6,9 @@ class UserController extends Controller {
 
     public function info(){
 
-        if ( isset($_SESSION['uid']) ) {
-            $userId = intval($_SESSION['uid']);
+        if ( cookie('uid') ) {
+            $userId = intval(cookie('uid'));
+            $userKey = cookie('uKey');
         } else {
             $userId = -1;
         }
@@ -16,8 +17,14 @@ class UserController extends Controller {
         }
         $user = M('user');
         $condition['uid']=$userId;
+        $condition['password']=$userKey;
         $res = $user->where($condition)->find();
-        return $res;
+        if($res) {
+            return $res;
+        } else {
+            return array('username'=>'游客','fee'=>0,'uid'=>0);
+        }
+        
     }
 
     public function login() {
@@ -50,7 +57,8 @@ class UserController extends Controller {
         $condition['password'] = md5($pwd);
         $data = $user->where($condition)->find();
         if ($data) {
-            $_SESSION['uid']=$data['uid'];
+            cookie('uid', $data['uid']);
+            cookie('uKey', $condition['password']);
             $res = array('status'=>1,'msg'=> '登陆成功','url'=>'user');
             echo json_encode($res);
             die();
@@ -99,7 +107,8 @@ class UserController extends Controller {
         $data = $user->create($condition);
 
         if ($data) {
-            $_SESSION['uid']= $user->add();
+            cookie('uid',  $user->add());
+            cookie('uKey', $condition['password']);
             $invites['username'] = $invite;
             $user->where($invites)->setInc('fee',1);
             $res = array('status'=>1,'msg'=> '注册成功','url'=>'user');
