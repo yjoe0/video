@@ -36,7 +36,13 @@
                             <ul class="mixed_site_nav site_nav sm sm-base">
                                 <li><a class="current" href="/">首页</a></li>
                                         
-                        <li><a href="/login" title="登陆">登陆</a></li>
+                        <li>
+                        <?php  if($user['uid'] == 0) { ?>
+                            <a href="/login" title="登陆">登陆
+                        <?php } else { ?>
+                            <a href="/user" title="用户中心">用户中心
+                        <?php }?>
+                        </a></li>
 
                                                 </ul>
                             <div class="clear clear_nav_inline_end">

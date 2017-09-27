@@ -57,8 +57,8 @@ class UserController extends Controller {
         $condition['password'] = md5($pwd);
         $data = $user->where($condition)->find();
         if ($data) {
-            cookie('uid', $data['uid']);
-            cookie('uKey', $condition['password']);
+            cookie('uid', $data['uid'],7*24*3600  );
+            cookie('uKey', $condition['password'], 7*24*3600 );
             $res = array('status'=>1,'msg'=> '登陆成功','url'=>'user');
             echo json_encode($res);
             die();
@@ -107,8 +107,8 @@ class UserController extends Controller {
         $data = $user->create($condition);
 
         if ($data) {
-            cookie('uid',  $user->add());
-            cookie('uKey', $condition['password']);
+            cookie('uid',  $user->add(), 7*24*3600 );
+            cookie('uKey', $condition['password'], 7*24*3600 );
             $invites['username'] = $invite;
             $user->where($invites)->setInc('fee',1);
             $res = array('status'=>1,'msg'=> '注册成功','url'=>'user');

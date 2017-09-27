@@ -16,19 +16,24 @@
 
                      <!--如果有img-->
 
+    <?php if( ($data['fee'] == '0') || ($user['fee'] >= $data['fee']) )  {?>
                         <a href="/detail/<?php echo $data['id']?>" rel="nofollow" class="post-cover-box"> 
                         <div style="background-image:url(https://joe0.stackstorage.com/public-share/<?php echo C('IMG_KEY');?>/preview?path=%2F<?php echo $data['cover']?>&mode=thumbnail&size=medium);" class="post-cover <?php if($user['fee'] < $data['fee']){ echo 'add-cover';  } ?>"
-                        >
-                        </div>
-</a> 
+                        ></div></a> 
+    <?php } else {?>
+                        <a href="/login" rel="nofollow" class="post-cover-box"> 
+                        <div style="background-image:url(https://joe0.stackstorage.com/public-share/<?php echo C('IMG_KEY');?>/preview?path=%2F<?php echo $data['cover']?>&mode=thumbnail&size=medium);" class="post-cover <?php if($user['fee'] < $data['fee']){ echo 'add-cover';  } ?>"
+                        ></div></a> 
+    <?php } ?>
+
                         <div class="post-text" style="height:6em">
                             <h2 class="post-title">
                             <?php if( ($data['fee'] == '0') || ($user['fee'] >= $data['fee']) )  {?>
                                 <a href="/detail/<?php echo $data['id']?>"><?php echo $data['title']?></a> 
                             <?php } else if($user['uid'] == 0){?>
-                            <a href="/login") ?>登陆后可见，点我登陆</a> 
+                            <a href="/login" >登陆后可见，点我登陆</a> 
                             <?php } else {?>
-                            <a href="/user")}">需要积分<?php echo $data['fee']?>，请在个人中心升级</a> 
+                            <a href="/user" >需要积分<?php echo $data['fee']?>，请在个人中心升级</a> 
                             <?php }?>
                             </h2>
 
