@@ -29,6 +29,13 @@
                 <h1 class="title">
                     福利视频集                </h1>
             </div>
+            <div>
+                <div class="ainfo">
+                <div class="tbox" style="max-width: 400px;">
+                    <input type="text" name="keyword" id="keyword" class="ci" placeholder="回车搜索" value="" required="true" >
+                </div>
+                </div>
+            </div>
             <div id="nav-menu" class="hidden-if-min">
                 <div class="bitcron_nav_container">
                     <div class="bitcron_nav">

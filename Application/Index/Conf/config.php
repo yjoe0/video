@@ -8,7 +8,7 @@ return array(
         'captcha' => 'Index/User/captcha',
         'user' => 'Index/User/user',
         'register' => 'Index/User/register',
-
+        's/:keyword\w' => 'Index/Index/search',
         'check' => 'Index/User/check',
     ),
 

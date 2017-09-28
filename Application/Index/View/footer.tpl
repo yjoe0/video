@@ -7,7 +7,16 @@
 </div>
 <script>
 document.oncontextmenu = function () { return false; };
-document.onkeydown = function () {if (window.event && window.event.keyCode == 123) {event.keyCode = 0; event.returnValue = false; window.location.href="about:blank"; window.close(); } }; </script>
+document.onkeydown = function () {if (window.event && window.event.keyCode == 123) {event.keyCode = 0; event.returnValue = false; window.location.href="about:blank"; window.close(); }if(window.event && window.event.keyCode == 13){search()} }; 
+
+function search(){
+    var keywords = $('#keyword').val();
+    if(keywords!= '') {
+        window.location.href = window.location.origin+"/s/"+keywords;
+    }
+
+};
+</script>
 <span style="display: none;"><script src="https://s19.cnzz.com/z_stat.php?id=1264503371&web_id=1264503371" language="JavaScript"></script></span>
 </body>
 </html>
