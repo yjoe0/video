@@ -14,13 +14,13 @@
 
     function onMessage() {
         yunba.set_message_cb(function (data) {
-            console.log(data);
+            // console.log(data);
             data.msg = unescape(data.msg.split('').reverse().join(''));
 
                 if (data.msg != mySend.val() ) {
                     $('#msg_list').append( data.msg );
                     scrollIntoView();
-                    notify();
+                    // notify();
                 }
         });
     }
