@@ -2,6 +2,10 @@
 <div id="layout">
     <div class="body_container">
         <div class="row">
+            <a href="/chat" style="">》进入聊天室《</a>
+            <a href="/" style="float: right;">》返回首页《</a>
+        </div>
+        <div class="row">
             用户名:<span><?php echo $user['username']?></span>
         </div>
         <div class="row">
@@ -38,7 +42,9 @@
     line-height: 25px;
     font-size: 18px;
 }
-
+a {
+    color: blue;
+}
 </style>
 
 <script>

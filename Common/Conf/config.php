@@ -21,5 +21,8 @@ return array(
     'DEFAULT_MODULE'       =>    'Index',  // 默认模块
     'HTML_CACHE_ON'=>false,
     'IMG_KEY' =>'9MEO9sz1YC3Zs9j',
-    'VIDEO_KEY'=>'Qqf1YGARgsV3uXv'
+    'VIDEO_KEY'=>'Qqf1YGARgsV3uXv',
+
+
+    'YUNBA_KEY' => '589069a0c4d184904a84bcd9',
 );
