@@ -9,7 +9,7 @@
                 <div id="list_container">
 <?php foreach($datas as $key => $data) {?>
         
-<article class="post-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+<article class="post-box pure-u-1-2 pure-u-sm-1-4 pure-u-md-1-6">
                     <div class="post">
 
                     <!--如果不是第2条-->

@@ -7,11 +7,12 @@ class IndexController extends Controller {
         if($user['uid']>0) {
             $order = 'id desc';
         } else {
-            $order = 'id asc';
+            header('Location:/login');
+            die();
         }
         $Contents = M('contents');
         $count      = $Contents->count();
-        $Page       = new \Think\Page($count,9);
+        $Page       = new \Think\Page($count,24);
         $show       = $Page->show();
         $datas = $Contents->order( $order )->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('datas',$datas);
@@ -51,7 +52,8 @@ class IndexController extends Controller {
         if($user['uid']>0) {
             $order = 'id desc';
         } else {
-            $order = 'id asc';
+            header('Location:/login');
+            die();
         }
         $keyword = I('get.keyword');
         $Contents = M('contents');
