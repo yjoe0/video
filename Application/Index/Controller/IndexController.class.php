@@ -7,8 +7,8 @@ class IndexController extends Controller {
         if($user['uid']>0) {
             $order = 'id desc';
         } else {
-            header('Location:/login');
-            die();
+            $order = 'id desc';
+            // die();
         }
         $Contents = M('contents');
         $count      = $Contents->count();
