@@ -67,8 +67,8 @@
 </div>
 <style> 
 .add-cover {
-    -webkit-filter: blur(6px); 
-    -moz-filter: blur(6px); -ms-filter: blur(6px);filter: blur(6px); 
+    -webkit-filter: blur(15px); 
+    -moz-filter: blur(15px); -ms-filter: blur(15px);filter: blur(15px); 
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);} </style>
 
 
