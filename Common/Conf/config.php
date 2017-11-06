@@ -4,7 +4,7 @@ return array(
     'DB_HOST'      =>  '127.0.0.1',     // 服务器地址
     'DB_NAME'      =>  'video',     // 数据库名
     'DB_USER'      =>  'root',     // 用户名
-    'DB_PWD'       =>  'root',     // 密码
+    'DB_PWD'       =>  'ycl414030',     // 密码
     'DB_PORT'      =>  '3306',     // 端口
     // 'DB_PREFIX'    =>  '',     // 数据库表前缀
     // 'DB_DSN'       =>  '',     // 数据库连接DSN 用于PDO方式
@@ -24,5 +24,5 @@ return array(
     'VIDEO_KEY'=>'Qqf1YGARgsV3uXv',
 
 
-    'YUNBA_KEY' => '589069a0c4d184904a84bcd9',
+    'YUNBA_KEY' => '589069a0c4d184904a84bcd9'
 );

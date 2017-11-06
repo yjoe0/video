@@ -12,8 +12,8 @@
 
     <!-- 使用url函数转换相关路径 -->
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://v.opihome.me/css/th/grid.css">
-    <link rel="stylesheet" href="http://v.opihome.me/css/th/style.css">
+    <link rel="stylesheet" href="/css/th/grid.css">
+    <link rel="stylesheet" href="/css/th/style.css">
 
 </head>
 <body>
@@ -22,12 +22,12 @@
     <div class="body_container">
         <div class="header-inner clearfix">
             <div class="site-name">
-                <a href="http://v.opihome.me/"> 
+                <a href="/"> 
                 <div id="logo">
-                    福利视频集                </div>
+                    福利视频集(注册即送VIP)                </div>
 </a> 
                 <h1 class="title">
-                    福利视频集                </h1>
+                    福利视频集(注册即送VIP)                </h1>
             </div>
             <div id="nav-menu" class="hidden-if-min">
                 <div class="bitcron_nav_container">

@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>登录到福利视频集 - 福利视频集</title>
         <meta name="robots" content="noindex, nofollow">
-        <link rel="stylesheet" href="http://v.opihome.me/css/normalize.css?v=14.10.10">
-<link rel="stylesheet" href="http://v.opihome.me/css/grid.css?v=14.10.10">
-<link rel="stylesheet" href="http://v.opihome.me/css/style.css?v=14.10.10">
+        <link rel="stylesheet" href="/css/normalize.css?v=14.10.10">
+<link rel="stylesheet" href="/css/grid.css?v=14.10.10">
+<link rel="stylesheet" href="/css/style.css?v=14.10.10">
 <!--[if lt IE 9]>
 <script src="http://v.opihome.me/js/html5shiv.js?v=14.10.10"></script>
 <script src="http://v.opihome.me/js/respond.js?v=14.10.10"></script>
@@ -49,7 +49,7 @@
                     </p>
     </div>
 </div>
-<script src="http://v.opihome.me/js/jquery.js?v=14.10.10"></script>
+<script src="/js/jquery.js?v=14.10.10"></script>
 <script>
 $(document).ready(function () {
     $('#name').focus();

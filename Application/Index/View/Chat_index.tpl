@@ -150,7 +150,7 @@
 <script>
 
 
-    var yunba = new Yunba({server: 'sock.yunba.io', port: 3000, appkey: '<?php echo C("YUNBA_KEY")?>'});    
+    var yunba = new Yunba({server: 'sock.yunba.io', port: 3000, appkey: '<?php echo C('YUNBA_KEY');?>'});    
     var topic = '<?php echo md5( date("y-m") );?>';
     var alias = '<?php echo $user['username'];?>';
     var mySend = $('#mySend');
