@@ -10,6 +10,7 @@ return array(
         'register' => 'Index/User/register',
         's/:keyword\w' => 'Index/Index/search',
         'check' => 'Index/User/check',
+        'movie/:vid\d' => 'Index/Movie/detail',
     ),
 
  );

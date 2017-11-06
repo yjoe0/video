@@ -49,17 +49,17 @@ class IndexController extends Controller {
 
     public function search() {
         $user = A('user')->info();
-        if($user['uid']>0) {
-            $order = 'id desc';
-        } else {
-            header('Location:/login');
-            die();
-        }
+        // if($user['uid']>0) {
+        //     $order = 'id desc';
+        // } else {
+        //     header('Location:/login');
+        //     die();
+        // }
         $keyword = I('get.keyword');
         $Contents = M('contents');
         $condition['title'] = array('like', '%'.$keyword.'%');
         $count      = $Contents->where($condition)->count();
-        $Page       = new \Think\Page($count,9);
+        $Page       = new \Think\Page($count,24);
         $show       = $Page->show();
         $datas = $Contents->where($condition)->order( $order )->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('datas',$datas);

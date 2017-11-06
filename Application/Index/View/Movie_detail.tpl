@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -8,7 +9,7 @@
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
 
-    <title>福利视频集</title>
+    <title><?php echo $data['title']?>-在线播放</title>
 
     <!-- 使用url函数转换相关路径 -->
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -36,12 +37,8 @@
                                 <li><a class="current" href="/">首页</a></li>
                                         
                         <li>
-                        <?php  if($user['uid'] == 0) { ?>
-                            <a href="/login" title="登陆">登陆
-                        <?php } else { ?>
-                            <a href="/user" title="用户中心">用户中心
-                        <?php }?>
-                        </a></li>
+                                                    <a href="/login" title="登陆">登陆
+                                                </a></li>
 
                                                 </ul>
                             <div class="clear clear_nav_inline_end">
@@ -52,16 +49,26 @@
                     </div>
                 </div>
             </div>
-                        <div>
-                <div class="ainfo">
-                <div class="tbox" style="max-width: 400px;">
-                    <input type="text" name="keyword" id="keyword" class="ci" placeholder="回车搜索" value="" required="true" >
-                </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
 
-
+<div id="layout" style="text-align: center;padding: 0  10px;">
+<div style="border: 1px  solid">
+    <div class="pure-g">
+                <div class="pure-u-5-5" style="color:red;font-size: 18px;"><p>如果不能播放请直接下载该视频！</p></div>
+            </div>
+        <div class="pure-g">
+                <div class="pure-u-3-5"><p><?php echo $data['title']?></p></div>
+                <div class="pure-u-1-5"><p><?php echo $data['size']?></p></div>
+                <div class="pure-u-1-5"><a href="<?php echo $data['video']?>" style="color:blue"><p>点我下载</p></a></div>
+            </div>
+</div>
+<video width="100%" controls="controls"> 
+<source src="<?php echo $data['video']?>" type="video/ogg"> 
+<source src="<?php echo $data['video']?>" type="video/mp4"> 
+  <source src="<?php echo $data['video']?>" type="video/wmv"> 
+您的浏览器不支持此种视频格式。 
+</video> 
+<include file="./Application/Index/View/footer.tpl" />

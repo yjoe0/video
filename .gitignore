@@ -1,5 +1,6 @@
 Runtime/
 Common/
+Common
 *.log
 config.php
 index.php

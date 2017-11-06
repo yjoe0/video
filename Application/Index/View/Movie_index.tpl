@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -36,12 +37,8 @@
                                 <li><a class="current" href="/">首页</a></li>
                                         
                         <li>
-                        <?php  if($user['uid'] == 0) { ?>
-                            <a href="/login" title="登陆">登陆
-                        <?php } else { ?>
-                            <a href="/user" title="用户中心">用户中心
-                        <?php }?>
-                        </a></li>
+                                                    <a href="/login" title="登陆">登陆
+                                                </a></li>
 
                                                 </ul>
                             <div class="clear clear_nav_inline_end">
@@ -52,16 +49,36 @@
                     </div>
                 </div>
             </div>
-                        <div>
-                <div class="ainfo">
-                <div class="tbox" style="max-width: 400px;">
-                    <input type="text" name="keyword" id="keyword" class="ci" placeholder="回车搜索" value="" required="true" >
-                </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
 
+<div id="layout" style="text-align: center;padding: 0  10px;">
+<div style="border: 1px  solid">
+    <div class="pure-g">
+                <div class="pure-u-4-5"><p>标题</p></div>
+                <div class="pure-u-1-5"><p>大小</p></div>
+            </div>
+        <?php foreach($data as $key => $value) {?>
+        <div class="pure-g border">
+                <div class="pure-u-4-5 titles"><a href='movie/<?php echo $value['id']?>'><p><?php echo $value['title']?></p></a></div>
+                <div class="pure-u-1-5 size"><p><?php echo $value['size']?></p></div>
+            </div>
+                <?php  } ?>
 
+        </div>
+</div>
+<style> 
+.titles {
+    overflow: hidden;
+}
+.border {
+    border-bottom: 1px solid; 
+}
+.add-cover {
+    -webkit-filter: blur(8px); 
+    -moz-filter: blur(8px); -ms-filter: blur(8px);filter: blur(8px); 
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);} </style>
+
+<include file="./Application/Index/View/footer.tpl" />

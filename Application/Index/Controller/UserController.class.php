@@ -13,7 +13,7 @@ class UserController extends Controller {
             $userId = -1;
         }
         if($userId < 0) {
-            return array('username'=>'游客','fee'=>10,'uid'=>0);
+            return array('username'=>'游客','fee'=>0,'uid'=>0);
         }
         $user = M('user');
         $condition['uid']=$userId;
