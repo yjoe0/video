@@ -45,8 +45,18 @@
                             <h1 class="post-header-title">
                                 <?php echo $data['title']?>                            </h1>
                         </div>
+                        <div style="margin-top: 1em;">
+                            <a href="http://qingyanqudou.com/BAyk?y=AVUZn" target="_blank">
+                                <img src="/Public/ad.gif" style="width: 100%;">
+                            </a>
+                        </div>
                         <div class="post-content">
                         <video id="video" x-webkit-airplay="true" autoplay="false" webkit-playsinline="true" preload="auto" playsinline="true" src="https://joe0.stackstorage.com/public-share/<?php echo C('VIDEO_KEY')?>/preview?path=%2F<?php echo $data['video']?>&mode=full" style="width: 98%;max-height: 800px;" poster="https://joe0.stackstorage.com/public-share/<?php echo C('IMG_KEY');?>/preview?path=%2F<?php echo $data['cover']?>&mode=thumbnail&size=medium"> </video>
+                        <div style="margin-top: 1em;">
+                            <a href="http://qingyanqudou.com/BAyk?y=AVUZn" target="_blank">
+                                <img src="/Public/ad.gif" style="width: 100%;">
+                            </a>
+                        </div>
                         </div>
                     </div>
                 </div>

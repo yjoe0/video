@@ -2,15 +2,11 @@
     <div class="body_container">
         <div class="foot-log">
             2017 © <a href="/" real="nofollow">福利视频集</a>
-	<a href="https://www.4321av.xyz" target="_blank">青青福利视频 </a>
 	<a href="http://www.7cldh.pw" target="_blank">AV七次郎导航 </a>
 	<a href="http://dyj.life/" target="_blank">大淫家成人在线</a>
 	<a href="http://www.sebdh.com" target="_blank">色逼导航</a>
 	<a href="https://landh.vip" target="_blank">蓝导航</a>
 	<a href="http://douqu.info" target="_blank">逗趣福利导航</a>
-	<a href="http://www.zuixindh.com" target="_blank">最新AV导航</a>
-	
-
         </div>
     </div>
 </div>
