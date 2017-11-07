@@ -4,10 +4,10 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $user = A('user')->info();
-        if($user['uid']>0) {
+        if($user['uid']>10) {
             $order = 'id desc';
         } else {
-            $order = 'id desc';
+            $order = 'id asc';
             // die();
         }
         $Contents = M('contents');

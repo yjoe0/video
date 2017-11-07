@@ -52,9 +52,9 @@
                         </div>
                         <div class="post-content">
                         <video id="video" x-webkit-airplay="true" autoplay="false" webkit-playsinline="true" preload="auto" playsinline="true" src="https://joe0.stackstorage.com/public-share/<?php echo C('VIDEO_KEY')?>/preview?path=%2F<?php echo $data['video']?>&mode=full" style="width: 98%;max-height: 800px;" poster="https://joe0.stackstorage.com/public-share/<?php echo C('IMG_KEY');?>/preview?path=%2F<?php echo $data['cover']?>&mode=thumbnail&size=medium"> </video>
-                        <div style="margin-top: 1em;">
-                            <a href="http://qingyanqudou.com/BAyk?y=AVUZn" target="_blank">
-                                <img src="/Public/ad.gif" style="width: 100%;">
+                        <div style="margin-top: 1em;font-size: 20px;text-align: center;color: red;">
+                            <a href="http://www.oetf5555.com:9001/?u=711111&k=7111&p=290" target="_blank" style="color: red">
+                                不够爽？点我来看真人直播吧
                             </a>
                         </div>
                         </div>
@@ -74,6 +74,9 @@
     </div>
 </div>
 <script>
+    $(this).find('audio').bind('ended',function () {
+   $('.voice').removeClass('voice1');
+});
     function waudioAutoPlay() {
         var audio = document.getElementById('video');
             audio.play();
@@ -92,6 +95,13 @@
         document.addEventListener('touchstart', audioAutoPlay() ,false);
         document.removeEventListener('DOMContentLoaded', waudioAutoPlay(),false);
         document.removeEventListener('touchstart', waudioAutoPlay(),false);
+        var audio = document.getElementById('video');
+        audio.addEventListener('ended',function(){
+          var r=confirm("不够爽？去看真人直播吧")
+          if (r==true) {
+                window.open("http://www.oetf5555.com:9001/?u=711111&k=7111&p=290");  
+            }
+        });
 
 </script>
 
