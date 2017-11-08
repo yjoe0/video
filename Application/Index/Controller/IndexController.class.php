@@ -7,7 +7,7 @@ class IndexController extends Controller {
         if($user['uid']>10) {
             $order = 'id desc';
         } else {
-            $order = 'id asc';
+            $order = 'id desc';
             // die();
         }
         $Contents = M('contents');

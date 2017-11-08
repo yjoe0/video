@@ -47,7 +47,7 @@ function search(){
             setCookie('first','1');
         }
     }
-    tips();
+    // tips();
 </script>
 <span style="display: none;"><script src="https://s19.cnzz.com/z_stat.php?id=1264503371&web_id=1264503371" language="JavaScript"></script>
 <script language="javascript" type="text/javascript" src="//js.users.51.la/19328932.js"></script>
