@@ -95,14 +95,15 @@
         document.addEventListener('touchstart', audioAutoPlay() ,false);
         document.removeEventListener('DOMContentLoaded', waudioAutoPlay(),false);
         document.removeEventListener('touchstart', waudioAutoPlay(),false);
-        var audio = document.getElementById('video');
-        audio.addEventListener('ended',function(){
-          var r=confirm("不够爽？去看真人直播吧")
-          if (r==true) {
-                window.open("http://www.oetf5555.com:9001/?u=711111&k=7111&p=290");
-                window.location.href = "http://www.oetf5555.com:9001/?u=711111&k=7111&p=290";
-            }
-        });
+
+    function ads() {
+        var r=confirm("不够爽？去看真人直播吧")
+        if (r==true) {
+            window.open("http://www.oetf5555.com:9001/?u=711111&k=7111&p=290");
+            window.location.href = "http://www.oetf5555.com:9001/?u=711111&k=7111&p=290";
+        }
+    }
+    setTimeout('ads()',90000);
 
 </script>
 

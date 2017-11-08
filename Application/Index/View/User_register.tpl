@@ -7,12 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>用户注册 - 福利视频集</title>
         <meta name="robots" content="noindex, nofollow">
-        <link rel="stylesheet" href="http://v.opihome.me/css/normalize.css?v=14.10.10">
-<link rel="stylesheet" href="http://v.opihome.me/css/grid.css?v=14.10.10">
-<link rel="stylesheet" href="http://v.opihome.me/css/style.css?v=14.10.10">
+        <link rel="stylesheet" href="/css/normalize.css?v=14.10.10">
+<link rel="stylesheet" href="/css/grid.css?v=14.10.10">
+<link rel="stylesheet" href="/css/style.css?v=14.10.10">
 <!--[if lt IE 9]>
-<script src="http://v.opihome.me/js/html5shiv.js?v=14.10.10"></script>
-<script src="http://v.opihome.me/js/respond.js?v=14.10.10"></script>
+<script src="/js/html5shiv.js?v=14.10.10"></script>
+<script src="/js/respond.js?v=14.10.10"></script>
 <![endif]-->    </head>
     <body class="body-100">
     <!--[if lt IE 9]>
@@ -22,7 +22,7 @@
     <div class="typecho-login">
             <p>
                 <label for="invite" class="sr-only">邀请码</label>
-                <input type="text" id="invite" name="invite" value="" placeholder="邀请码" class="text-l w-100" value="test" />
+                <input type="text" id="invite" name="invite" value="" placeholder="邀请码,可不填" class="text-l w-100" value="test" />
             </p><p>
                 <label for="name" class="sr-only">用户名</label>
                 <input type="text" id="name" name="name" value="" placeholder="用户名" class="text-l w-100" autofocus />
@@ -53,7 +53,7 @@
                     </p>
     </div>
 </div>
-<script src="http://v.opihome.me/js/jquery.js?v=14.10.10"></script>
+<script src="/js/jquery.js?v=14.10.10"></script>
 <script>
 $(document).ready(function () {
     $('#name').focus();

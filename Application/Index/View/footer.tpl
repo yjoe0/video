@@ -20,7 +20,34 @@ function search(){
         window.location.href = window.location.origin+"/s/"+keywords;
     }
 
-};
+}
+
+    function setCookie(cname,cvalue)
+    {
+      var d = new Date();
+      d.setTime(d.getTime()+(60*60*1000));
+      var expires = "expires="+d.toGMTString();
+      document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname)
+    {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) 
+      {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+      }
+      return "";
+    }
+    function tips() {
+        var cname = getCookie('first');
+        if(cname == '') {
+            alert('为了避免恶意刷流量，更多福利在后面，简单注册一下即可永久使用');
+            setCookie('first','1');
+        }
+    }
+    tips();
 </script>
 <span style="display: none;"><script src="https://s19.cnzz.com/z_stat.php?id=1264503371&web_id=1264503371" language="JavaScript"></script>
 <script language="javascript" type="text/javascript" src="//js.users.51.la/19328932.js"></script>
